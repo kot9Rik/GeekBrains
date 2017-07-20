@@ -2,7 +2,7 @@
  * Java. Level 1. Lesson 2. Example of homework
  *
  * @author Aleksandr Vvedenskiy
- * @version dated Jul 20, 2017
+ * @version dated Jul 21, 2017
  */
  
  import java.util.*;
@@ -13,6 +13,7 @@
 		 invertArray();
 		 fillArray();
 		 changeArray();
+		 fillDiagonal();
 	 }
 	 
 	/**
@@ -62,4 +63,19 @@
 		System.out.println(Arrays.toString(a));
 	}
 	
+    /**
+     * 4. Создать квадратный двумерный целочисленный массив 
+	 *    (количество строк и столбцов одинаковое), и с помощью цикла(-ов)
+     *    заполнить его диагональные элементы единицами;
+     */
+	static void fillDiagonal() {
+		int size = 5;
+        int[][] arr = new int[size][size];
+        for (int i = 0; i < size; i++) {
+            arr[i][i] = 1;
+            arr[i][size - i - 1] = 1;
+        }
+        for (int i = 0; i < size; i++)
+            System.out.println(Arrays.toString(arr[i]));
+	}	
  }
