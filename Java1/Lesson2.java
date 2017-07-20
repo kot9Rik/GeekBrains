@@ -9,6 +9,7 @@
 	 
 	 public static void main(String[] args){
 		 invertArray();
+		 fillArray();
 	 }
 	 
 	/**
@@ -26,7 +27,22 @@
 		for (int i = 0; i < a.length; i++) {
 		    str = str + " " + a[i];	
 		}
-		System.out.print(str);
+		System.out.println(str);
 	}	
 	
+	/**
+     * 2. Задать пустой целочисленный массив размером 8. 
+	 *    С помощью цикла заполнить его значениями 0 3 6 9 12 15 18 21;
+     */
+	static void fillArray() {
+		int[] arr = new int[8];
+		String str = "";
+		for (int i = 0, j = 0; i < arr.length; i++, j += 3) {
+			arr[i] = j;
+		}
+		for (int i = 0; i < arr.length; i++) {
+		    str = str + " " + arr[i];	
+		}
+		System.out.println(str);
+	}
  }
