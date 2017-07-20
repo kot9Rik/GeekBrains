@@ -23,6 +23,11 @@
         System.out.println(checkBalance(new int[]{1, 1, 1, 2, 1}));
         System.out.println(checkBalance(new int[]{2, 1, 1, 2, 1}));
         System.out.println(checkBalance(new int[]{10, 10}));
+        System.out.println(" ");
+        System.out.println(Arrays.toString(
+            shiftArray(new int[]{1, 2, 3, 4, 5}, 2)));
+        System.out.println(Arrays.toString(
+            shiftArray(new int[]{1, 2, 3, 4, 5}, -4)));
     }
 	 
     /**
@@ -127,4 +132,33 @@
         }
         return false;
     }
+	
+    /**
+     * 7. **** Написать метод, которому на вход подается одномерный массив
+     *    и число n (может быть положительным, или отрицательным), при этом
+     *    метод должен сместить все элементы массива на n позиций.
+     *    Для усложнения задачи нельзя пользоваться вспомогательными массивами
+     */
+    static int[] shiftArray(int[] array, int shift) {
+        if (array == null || array.length < 2
+            || shift == 0 || shift % array.length == 0)
+            return array;
+        shift = shift % array.length; // optimization of the number of shifts
+        for (int cnt = 0; cnt < Math.abs(shift); cnt++) {
+            if (shift > 0) {
+                int tmp = array[array.length - 1];
+                for (int i = array.length - 1; i > 0; i--)
+                    array[i] = array[i - 1];
+                array[0] = tmp;
+            }
+            if (shift < 0) {
+                int tmp = array[0];
+                for (int i = 1; i < array.length; i++)
+                    array[i - 1] = array[i];
+                array[array.length - 1] = tmp;
+            }
+        }
+        return array;
+    }
+
  }
