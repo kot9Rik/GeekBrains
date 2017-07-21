@@ -1,5 +1,5 @@
 /**
- * Java. Level 1. Lesson 2. Example of homework
+ * Java. Level 1. Lesson 3. Example of homework
  *
  * @author Aleksandr Vvedenskiy
  * @version dated Jul 21, 2017
