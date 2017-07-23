@@ -8,7 +8,7 @@
 class Lesson5 {
     public static void main(String[] args) {
     /**
-     *  ╤ючфрЄ№ ьрёёшт шч 5 ёюЄЁєфэшъют.
+     *  Создать массив из 5 сотрудников.
      */
         Person[] persArray = new Person[5];
         persArray[0] = new Person("Ivanov Ivan Ivanovich","Expert",
@@ -23,7 +23,7 @@ class Lesson5 {
             "GorohovDS@mail.ru","911-901-90-90",1600,36);
 
     /**
-     *  ╤ яюью∙№■ Ўшъыр т√тхёЄш шэЇюЁьрЎш■ Єюы№ъю ю ёюЄЁєфэшърї ёЄрЁ°х 40 ыхЄ.
+     *  С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
      */
         System.out.println("-----------------Persons are more 40 years old.-----------------");
         for (int i = 0; i < persArray.length; i++) {
@@ -36,8 +36,8 @@ class Lesson5 {
 }
 
     /**
-     *  ╤ючфрЄ№ ъырёё "╤юЄЁєфэшъ" ё яюы ьш: ╘╚╬, фюыцэюёЄ№,
-     *  email, ЄхыхЇюэ, чрЁяырЄр, тючЁрёЄ.
+     *  Создать класс "Сотрудник" с полями: ФИО, должность,
+     *  email, телефон, зарплата, возраст.
      */
 class Person {
     String fio;
@@ -48,7 +48,7 @@ class Person {
     int age;
 
     /**
-     *  ╩юэёЄЁєъЄюЁ ъырёёр фюыцхэ чряюыэ Є№ ¤Єш яюы  яЁш ёючфрэшш юс·хъЄр.
+     *  Конструктор класса должен заполнять эти поля при создании объекта.
      */
     Person(String fio, String position, String email, String phonenum, int cash, int age) {
         this.fio = fio;
@@ -60,8 +60,8 @@ class Person {
     }
 
     /**
-     *  ┬эєЄЁш ъырёёр л╤юЄЁєфэшъ╗ эряшёрЄ№ ьхЄюф, ъюЄюЁ√щ
-     *  т√тюфшЄ шэЇюЁьрЎш■ юс юс·хъЄх т ъюэёюы№.
+     *  Внутри класса <Сотрудник> написать метод, который
+     *  выводит информацию об объекте в консоль.
      */
     void outputPerson() {
         System.out.println(fio);
