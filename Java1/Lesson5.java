@@ -20,7 +20,7 @@ class Lesson5 {
         persArray[3] = new Person("Smirnova Alla Borisovna","BookKeeper",
             "SmirnovaAB@mail.ru","915-789-78-78",3000,42);
         persArray[4] = new Person("Gorohov Dmitriy Sergeevich","Consultant",
-            "GorohovDS@mail.ru","911-901-90-90",1600,36);
+            "GorohovDS@mail.ru","911-901-90-90",1600,37);
 
     /**
      *  С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
