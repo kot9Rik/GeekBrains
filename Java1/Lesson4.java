@@ -41,10 +41,13 @@ class Lesson4 {
                 System.out.println("AI WIN!");
                 break;
             }
+			// This code doesn't matter because a human always makes a move last
+			/*
             if (isMapFull()) {
                 System.out.println("Sorry, DRAW!");
                 break;
             }
+			*/
         }
         System.out.println("GAME OVER.");
     }
