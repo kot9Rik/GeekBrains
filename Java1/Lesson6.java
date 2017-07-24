@@ -57,8 +57,7 @@ class Cat extends Animal {
         int r = 200;
         if (run > r) {
             System.out.println("The cat has NOT run " + run + "m.");
-        }
-        else {
+        } else {
             System.out.println("The cat has run " + run + "m.");
         }
     }
@@ -73,8 +72,7 @@ class Cat extends Animal {
         float j = 2.0F;
         if (jump > j) {
             System.out.println("The cat has NOT jump " + jump + "m.");
-        }
-        else {
+        } else {
             System.out.println("The cat has jump " + jump + "m.");
         }
     }
@@ -97,8 +95,7 @@ class Dog extends Animal {
         int r = 500;
         if (run > r) {
             System.out.println("The dog has NOT run " + run + "m.");
-        }
-        else {
+        } else {
             System.out.println("The dog has run " + run + "m.");
         }
     }
@@ -108,8 +105,7 @@ class Dog extends Animal {
         int s = 10;
         if (swim > s) {
             System.out.println("The dog has NOT swim " + swim + "m.");
-        }
-        else {
+        } else {
             System.out.println("The dog has swim " + swim + "m.");
         }
     }
@@ -119,8 +115,7 @@ class Dog extends Animal {
         float j = 0.5F;
         if (jump > j) {
             System.out.println("The dog has NOT jump " + jump + "m.");
-        }
-        else {
+        } else {
             System.out.println("The dog has jump " + jump + "m.");
         }
     }
