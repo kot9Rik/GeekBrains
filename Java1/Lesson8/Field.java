@@ -11,6 +11,18 @@ import javax.swing.ImageIcon;
 import javax.imageio.*;
 import java.io.*;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.LineEvent;
+import javax.sound.sampled.LineListener;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
 class Field {
     private final int FIELD_SIZE;
     private final int CELL_SIZE;
@@ -51,12 +63,18 @@ class Field {
                                              
     void setDot(int x, int y, char dot) { // set dot and check fill and win
         field[x][y] = dot;
-        if (isFull())
+        if (isFull() && !isWin(HUMAN_DOT)) {
             gameOverMsg = MSG_DRAW;
-        if (isWin(HUMAN_DOT))
+            Sound.playSound("Draw.wav").join();
+        }
+        if (isWin(HUMAN_DOT)) {
             gameOverMsg = MSG_HUMAN_WON;
-        if (isWin(AI_DOT))
+            Sound.playSound("Win.wav").join();
+        }
+        if (isWin(AI_DOT)) {
             gameOverMsg = MSG_AI_WON;
+            Sound.playSound("Loser.wav").join();
+        }
     }
 
     boolean isCellEmpty(int x, int y) {
