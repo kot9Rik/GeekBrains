@@ -1,7 +1,8 @@
-/*
+/**
  * Java 1. Lesson 8. Game Tic Tac Toe
  *
  * @author Vvedenskiy Aleksandr
+ * @version dated Jul 25, 2017
  */
  
 import java.util.*;
