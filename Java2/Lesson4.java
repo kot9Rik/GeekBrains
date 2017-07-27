@@ -1,5 +1,5 @@
 /**
- * Java 2. Lesson 4. Game Tic Tac Toe
+ * Java 2. Lesson 4.
  *
  * @author Vvedenskiy Aleksandr
  * @version dated Jul 27, 2017
